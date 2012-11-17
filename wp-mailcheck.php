@@ -42,7 +42,7 @@ require_once("admin/class.php");
 
 function bd_mailcheck_js()
 {
-	wp_register_script( 'bd-mailcheck-js', plugins_url( '/src/mailcheck.min.js', __FILE__ ), array( 'jquery' ), true );
+	wp_register_script( 'bd-mailcheck-js', plugins_url( '/js/mailcheck.min.js', __FILE__ ), array( 'jquery' ), true );
 	
 	wp_enqueue_script( 'bd-mailcheck-js' );
 }
