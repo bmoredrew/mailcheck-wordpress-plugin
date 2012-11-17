@@ -1,5 +1,10 @@
 <?php
 
+// variables to use
+
+$domains
+$topLevelDomains
+
 //Configure Mailcheck Admin Panel
 
 $config = array(
