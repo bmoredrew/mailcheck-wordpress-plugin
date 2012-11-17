@@ -46,9 +46,18 @@ add_action( 'wp_enqueue_scripts', 'bd_mailcheck_js' );
 
 
 function load_bd_mailcheck() {
-    echo '<script> here?';
+    echo 'script?';
 }
 add_action('wp_footer', 'load_bd_mailcheck');
+
+// note from andy
+
+jQuery(document).ready(function($){
+
+// your JS code
+
+});
+
 
 <script>
 var domains = ['hotmail.com', 'gmail.com', 'aol.com'];
@@ -72,15 +81,6 @@ $('#email').on('blur', function() {
   });
 });
 </script>
-
-
-// note from stratton
-
-jQuery(document).ready(function($){
-
-// your JS code
-
-});
 
 
 ?>
