@@ -32,7 +32,19 @@ License: GPL2
 
 // enqueue mailcheck.min.js into footer from /src/
 
+function bd_mailcheck_js()
+{
+	// Register mailcheck js
+	wp_register_script( 'bd-mailcheck-js', plugins_url( '/src/mailcheck.min.js', __FILE__ ), array( 'jquery' ), true );
+	
+	// Enqueue mailcheck js
+	wp_enqueue_script( 'bd-mailcheck-js' );
+}
+add_action( 'wp_enqueue_scripts', 'bd_mailcheck_js' );
+
+
 // convert #email to admin option
+// convert domains = to admin options
 
 <script>
 var domains = ['hotmail.com', 'gmail.com', 'aol.com'];
@@ -44,9 +56,9 @@ var superStringDistance = function(string1, string2) {
 
 $('#email').on('blur', function() {
   $(this).mailcheck({
-    domains: domains,                       // optional
-    topLevelDomains: topLevelDomains,       // optional
-    distanceFunction: superStringDistance,  // optional
+    domains: domains,                       
+    topLevelDomains: topLevelDomains,       
+    distanceFunction: superStringDistance,
     suggested: function(element, suggestion) {
       // callback code
     },
