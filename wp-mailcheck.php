@@ -28,6 +28,14 @@ License: GPL2
 
 <?php
 
+/* Admin Stuff */
+
+require_once("admin/class.php");
+
+?>
+
+<?php
+
 // load jquery
 
 // Register & Enqueue mailcheck.min.js
