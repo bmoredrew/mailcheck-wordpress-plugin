@@ -15,4 +15,4 @@ Licensed under the MIT License.
 
 Copyright (c) 2012 [Drew Poland](http://www.baltimoredrew.com)
 
-Licensed under the GPL License.
+Licensed under the GPL2 License. See wp-mailcheck.php for more details.
