@@ -74,4 +74,13 @@ $('#email').on('blur', function() {
 </script>
 
 
+// note from stratton
+
+jQuery(document).ready(function($){
+
+// your JS code
+
+});
+
+
 ?>
