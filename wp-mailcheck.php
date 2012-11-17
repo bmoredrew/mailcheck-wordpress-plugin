@@ -66,11 +66,14 @@ add_action( 'wp_enqueue_scripts', 'bd_mailcheck_js' );
 
 // });
 
+$domains
+$topLevelDomains
+
+
 
 <script>
 var domains = ['hotmail.com', 'gmail.com', 'aol.com'];
 var topLevelDomains = ["com", "net", "org"];
-
 var superStringDistance = function(string1, string2) {
   // a string distance algorithm of your choosing
 }
