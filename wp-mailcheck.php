@@ -30,21 +30,19 @@ License: GPL2
 
 // check for jquery, if not, enqueue to footer - is this necessary? is array jquery in register_script enough ?
 
-// enqueue mailcheck.min.js
+// Register & Enqueue mailcheck.min.js
 
 function bd_mailcheck_js()
 {
-	// Register mailcheck js
 	wp_register_script( 'bd-mailcheck-js', plugins_url( '/src/mailcheck.min.js', __FILE__ ), array( 'jquery' ), true );
 	
-	// Enqueue mailcheck js
 	wp_enqueue_script( 'bd-mailcheck-js' );
 }
 add_action( 'wp_enqueue_scripts', 'bd_mailcheck_js' );
 
 
-// convert #email to admin option
-// convert domains = to admin options
+// convert ID selection to admin option
+// convert domains & TLD to admin options
 
 <script>
 var domains = ['hotmail.com', 'gmail.com', 'aol.com'];
@@ -60,10 +58,10 @@ $('#email').on('blur', function() {
     topLevelDomains: topLevelDomains,       
     distanceFunction: superStringDistance,
     suggested: function(element, suggestion) {
-      // callback code
+
     },
     empty: function(element) {
-      // callback code
+
     }
   });
 });
