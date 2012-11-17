@@ -26,3 +26,36 @@ License: GPL2
 */
 ?>
 
+<?php
+
+// check for jquery, if not, enqueue to footer - is this necessary?
+
+// enqueue mailcheck.min.js into footer from /src/
+
+// convert #email to admin option
+
+<script>
+var domains = ['hotmail.com', 'gmail.com', 'aol.com'];
+var topLevelDomains = ["com", "net", "org"];
+
+var superStringDistance = function(string1, string2) {
+  // a string distance algorithm of your choosing
+}
+
+$('#email').on('blur', function() {
+  $(this).mailcheck({
+    domains: domains,                       // optional
+    topLevelDomains: topLevelDomains,       // optional
+    distanceFunction: superStringDistance,  // optional
+    suggested: function(element, suggestion) {
+      // callback code
+    },
+    empty: function(element) {
+      // callback code
+    }
+  });
+});
+</script>
+
+
+?>
