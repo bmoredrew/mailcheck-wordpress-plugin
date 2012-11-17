@@ -44,6 +44,12 @@ add_action( 'wp_enqueue_scripts', 'bd_mailcheck_js' );
 // convert ID selection to admin option
 // convert domains & TLD to admin options
 
+
+function load_bd_mailcheck() {
+    echo '<script> here?';
+}
+add_action('wp_footer', 'load_bd_mailcheck');
+
 <script>
 var domains = ['hotmail.com', 'gmail.com', 'aol.com'];
 var topLevelDomains = ["com", "net", "org"];
