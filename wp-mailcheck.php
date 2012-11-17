@@ -28,9 +28,9 @@ License: GPL2
 
 <?php
 
-// check for jquery, if not, enqueue to footer - is this necessary?
+// check for jquery, if not, enqueue to footer - is this necessary? is array jquery in register_script enough ?
 
-// enqueue mailcheck.min.js into footer from /src/
+// enqueue mailcheck.min.js
 
 function bd_mailcheck_js()
 {
