@@ -24,7 +24,7 @@ jQuery(document).ready(function($){
 			
 				var $parent = $('#email').parent();
 				$('.szbl-mailcheck-msg', $parent).remove();
-				if ( !$('#email').val().match(/^[\w\d\.\-\_']+@([\w\d\-]+\.)\w{2,}$/) )
+				if ( !$('#email').val().match(/^[\w\d\.\-\_']+@([\w\d\-]+\.)+\w{2,}$/) )
 				$parent.append('<span class="szbl-mailcheck-msg szbl-mailcheck-error">Please enter a valid email address.</span>');
 				
 		    }
