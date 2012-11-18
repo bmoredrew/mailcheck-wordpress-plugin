@@ -6,7 +6,10 @@
 
 ## Contributors
 
-[WordPress Developer](http://www.theandystratton.com) Andy Stratton
+[WordPress Front-End Developer](http://www.baltimoredrew.com) Drew Poland
+Twitter: [@bmoredrew](http://www.twitter.com/@bmoredrew)
+
+[WordPress PHP Developer](http://www.theandystratton.com) Andy Stratton
 Twitter: [@theandystratton](http://www.twitter.com/@theandystratton)
 
 
@@ -19,6 +22,6 @@ Licensed under the MIT License.
 
 ## Mailcheck.js WordPress Plugin License
 
-Copyright (c) 2012 [Drew Poland](http://www.baltimoredrew.com)
+Copyright (c) 2012 [Sizeable Interactive](http://www.sizeableinteractive.com)
 
 Licensed under the GPL2 License. See wp-mailcheck.php for more details.
