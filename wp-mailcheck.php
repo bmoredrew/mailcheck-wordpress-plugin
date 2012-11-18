@@ -24,74 +24,10 @@ License: GPL2
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
-?>
 
-<?php
-
-/* Admin Stuff */
-
-require_once("admin/class.php");
-
-?>
-
-<?php
-
-// load jquery
-
-// Register & Enqueue mailcheck.min.js
-
-function bd_mailcheck_js()
+if ( is_admin() )
 {
-	wp_register_script( 'bd-mailcheck-js', plugins_url( '/js/mailcheck.min.js', __FILE__ ), array( 'jquery' ), true );
-	
-	wp_enqueue_script( 'bd-mailcheck-js' );
-}
-add_action( 'wp_enqueue_scripts', 'bd_mailcheck_js' );
-
-
-// convert ID selection to admin option
-// convert domains & TLD to admin options
-
-
-// function load_bd_mailcheck() {
-//    echo 'script?';
-// }
-// add_action('wp_footer', 'load_bd_mailcheck');
-
-// note from andy
-
-// jQuery(document).ready(function($){
-
-// your JS code
-
-// });
-
-$domains
-$topLevelDomains
-
-
-
-<script>
-var domains = ['hotmail.com', 'gmail.com', 'aol.com'];
-var topLevelDomains = ["com", "net", "org"];
-var superStringDistance = function(string1, string2) {
-  // a string distance algorithm of your choosing
+	require_once dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'wp-mailcheck-admin.php';	
 }
 
-$('#email').on('blur', function() {
-  $(this).mailcheck({
-    domains: domains,                       
-    topLevelDomains: topLevelDomains,       
-    distanceFunction: superStringDistance,
-    suggested: function(element, suggestion) {
-
-    },
-    empty: function(element) {
-
-    }
-  });
-});
-</script>
-
-
-?>
+require_once dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'wp-mailcheck-main.php';
