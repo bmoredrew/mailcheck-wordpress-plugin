@@ -5,7 +5,7 @@ add_action('admin_menu', 'mailcheck_create_menu');
 function mailcheck_create_menu() {
 
 	//create new top-level menu
-	add_menu_page('Mailcheck Plugin Settings', 'Mailcheck Settings', 'administrator', __FILE__, 'mailcheck_settings_page',plugins_url('/images/icon.png', __FILE__));
+	add_menu_page('Mailcheck Plugin Settings', 'Mailcheck', 'administrator', __FILE__, 'mailcheck_settings_page',plugins_url('/images/icon.png', __FILE__));
 
 	//call register settings function
 	add_action( 'admin_init', 'register_mailcheck_settings' );
