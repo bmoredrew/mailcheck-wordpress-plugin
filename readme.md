@@ -16,6 +16,11 @@ When your user types in "user@hotnail.con", Mailcheck will suggest "user@hotmail
 Mailcheck will offer up suggestions for top level domains too, and suggest ".com" when a user types in "user@hotmail.cmo".
 
 
+## Configuring Mailcheck WordPress Plugin
+
+Coming soon.
+
+
 ## Contributors
 
 [WordPress Front-End Developer](http://www.baltimoredrew.com) Drew Poland
