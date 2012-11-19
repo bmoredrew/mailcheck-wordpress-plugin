@@ -21,8 +21,8 @@ class Szbl_Mailcheck_Js
 	public function wp_enqueue_scripts()
 	{
 		wp_enqueue_script( 'jquery' );
-		wp_register_script( 'bd-mailcheck-js', plugins_url( '/js/mailcheck.min.js', __FILE__ ), array( 'jquery' ), true );
-		wp_enqueue_script( 'bd-mailcheck-js' );
+		wp_register_script( 'szbl-mailcheck-js', plugins_url( '/js/mailcheck.min.js', __FILE__ ), array( 'jquery' ), true );
+		wp_enqueue_script( 'szbl-mailcheck-js' );
 	}
 	
 	public function wp_footer()
