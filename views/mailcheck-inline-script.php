@@ -1,8 +1,12 @@
 <script type="text/javascript">
 jQuery(document).ready(function($){
 	
-	var domains = ['hotmail.com', 'gmail.com', 'aol.com'];
-	var topLevelDomains = ["com", "net", "org"];
+	var domains = ["yahoo.com", "google.com", "hotmail.com", "gmail.com", "me.com", "aol.com", "mac.com",
+      "live.com", "comcast.net", "googlemail.com", "msn.com", "hotmail.co.uk", "yahoo.co.uk",
+      "facebook.com", "verizon.net", "sbcglobal.net", "att.net", "gmx.com", "mail.com"];
+
+	var topLevelDomains = ["co.uk", "com", "net", "org", "info", "edu", "gov", "mil"];
+	
 	// var superStringDistance = function(string1, string2) {
 	// string distance algorithm of your choosing
 	// }
