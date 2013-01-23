@@ -32,6 +32,22 @@ edit `line 4` in `/views/mailcheck-inline-script.php`
 edit `line 8` in `/views/mailcheck-inline-script.php`
 
 
+## Styling The Mailcheck Message
+
+You can style the message displayed when a possible error occurs using `.szbl-mailcheck-msg`. 
+
+Example:
+
+`.szbl-mailcheck-msg {
+display: block;
+color: red;
+}`
+
+Result:
+
+![Mailcheck WordPress plugin styled](http://baltimoredrew.com/assets/plugins/mailcheck-styled.png)
+
+
 ## Contributors
 
 [WordPress Developer](http://www.baltimoredrew.com) Drew Poland
