@@ -22,11 +22,14 @@ At the moment there is no settings or admin panel to configure the plugin. This 
 
 If you want to make a pull request and build one, by all means! This is GPL2 and you will be credited if the branch is merged.
 
-### To define your e-mail field (#email by default), simply change the selector on `line 30` in `wp-mailcheck-main.php`
+### Defining the e-mail field (#email by default):
+simply change the selector on `line 30` in `wp-mailcheck-main.php`
 
-### To add more domains to check against, edit `line 4` in `/views/mailcheck-inline-script.php`
+### Adding more domains:
+edit `line 4` in `/views/mailcheck-inline-script.php`
 
-### To add more extensions to check against, edit `line 8` in `/views/mailcheck-inline-script.php`
+### Adding more TLD's:
+edit `line 8` in `/views/mailcheck-inline-script.php`
 
 
 ## Contributors
