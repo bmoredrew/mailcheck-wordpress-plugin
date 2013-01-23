@@ -18,12 +18,20 @@ Mailcheck will offer up suggestions for top level domains too, and suggest ".com
 
 ## Configuring Mailcheck WordPress Plugin
 
-Coming soon.
+At the moment there is no settings or admin panel to configure the plugin. This is in the works- just not sure when it will be completed. 
+
+If you want to make a pull request and build one, by all means! This is GPL2 and you will be credited if the branch is merged.
+
+### To define your e-mail field (#email by default), simply change the selector on `line 30` in `wp-mailcheck-main.php`
+
+### To add more domains to check against, edit `line 4` in `/views/mailcheck-inline-script.php`
+
+### To add more extensions to check against, edit `line 8` in `/views/mailcheck-inline-script.php`
 
 
 ## Contributors
 
-[WordPress Front-End Developer](http://www.baltimoredrew.com) Drew Poland
+[WordPress Developer](http://www.baltimoredrew.com) Drew Poland
 
 Twitter: [@bmoredrew](http://www.twitter.com/@bmoredrew)
 
