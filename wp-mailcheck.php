@@ -1,15 +1,15 @@
 <?php
 /*
 Plugin Name: Mailcheck.js WordPress Plugin
-Plugin URI: http://www.baltimoredrew.com/mailcheck-wordpress-plugin/
+Plugin URI: http://www.baltimoredrew.com/plugins/mailcheck-wordpress-plugin/
 Description: Mailcheck.js integration for WordPress
 Version: 0.1.0
-Author: Drew Poland / Baltimore Drew
-Author URI: http://www.baltimoredrew.com/
+Author: Drew Poland
+Author URI: http://www.baltimoredrew.com
 License: GPL2
 */
 
-/*  Copyright 2012  Drew Poland  (email: drew@iheartargyle.com )
+/*  Copyright 2013  Drew Poland  & Andy Stratton (http://theandystratton.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
