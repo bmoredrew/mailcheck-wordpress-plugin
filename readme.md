@@ -28,6 +28,8 @@ simply change the selector on `line 30` in `wp-mailcheck-main.php`
 ### Adding more domains:
 edit `line 4` in `/views/mailcheck-inline-script.php`
 
+*here is a [list of popular domains](https://github.com/Kicksend/mailcheck/wiki/List-of-Popular-Domains)*
+
 ### Adding more TLD's:
 edit `line 8` in `/views/mailcheck-inline-script.php`
 
