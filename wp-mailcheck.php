@@ -25,9 +25,4 @@ License: GPL2
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-if ( is_admin() )
-{
-	require_once dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'wp-mailcheck-admin.php';	
-}
-
 require_once dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'wp-mailcheck-main.php';
