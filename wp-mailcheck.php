@@ -4,8 +4,8 @@ Plugin Name: Mailcheck.js WordPress Plugin
 Plugin URI: http://www.baltimoredrew.com/plugins/mailcheck-wordpress-plugin/
 Description: Mailcheck.js integration for WordPress
 Version: 0.1.0
-Author: Drew Poland
-Author URI: http://www.baltimoredrew.com
+Author: Sizeable Interactive
+Author URI: http://www.sizeableinteractive.com
 License: GPL2
 */
 
