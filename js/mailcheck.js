@@ -8,7 +8,7 @@
  *
  * Licensed under the MIT License.
  *
- * v 1.1
+ * v 1.0.4
  */
 
 var Kicksend = {
@@ -17,26 +17,22 @@ var Kicksend = {
 
     defaultDomains: ["yahoo.com", "google.com", "hotmail.com", "gmail.com", "me.com", "aol.com", "mac.com",
       "live.com", "comcast.net", "googlemail.com", "msn.com", "hotmail.co.uk", "yahoo.co.uk",
-      "facebook.com", "verizon.net", "sbcglobal.net", "att.net", "gmx.com", "mail.com"],
+      "facebook.com", "verizon.net", "sbcglobal.net", "att.net", "gmx.com", "mail.com", "outlook.com", "icloud.com"],
 
-    defaultTopLevelDomains: ["co.uk", "com", "net", "org", "info", "edu", "gov", "mil"],
+    defaultTopLevelDomains: ["co.jp", "co.uk", "com", "net", "org", "info", "edu", "gov", "mil", "ca"],
 
     run: function(opts) {
       opts.domains = opts.domains || Kicksend.mailcheck.defaultDomains;
       opts.topLevelDomains = opts.topLevelDomains || Kicksend.mailcheck.defaultTopLevelDomains;
       opts.distanceFunction = opts.distanceFunction || Kicksend.sift3Distance;
 
-      var result = Kicksend.mailcheck.suggest(encodeURI(opts.email), opts.domains, opts.topLevelDomains, opts.distanceFunction);
+      var defaultCallback = function(result){ return result }
+      var suggestedCallback = opts.suggested || defaultCallback
+      var emptyCallback = opts.empty || defaultCallback
 
-      if (result) {
-        if (opts.suggested) {
-          opts.suggested(result);
-        }
-      } else {
-        if (opts.empty) {
-          opts.empty();
-        }
-      }
+      var result = Kicksend.mailcheck.suggest(Kicksend.mailcheck.encodeEmail(opts.email), opts.domains, opts.topLevelDomains, opts.distanceFunction);
+
+      return result ? suggestedCallback(result) : emptyCallback()
     },
 
     suggest: function(email, domains, topLevelDomains, distanceFunction) {
@@ -141,7 +137,7 @@ var Kicksend = {
     },
 
     splitEmail: function(email) {
-      var parts = email.split('@');
+      var parts = email.trim().split('@');
 
       if (parts.length < 2) {
         return false;
@@ -178,11 +174,28 @@ var Kicksend = {
         domain: domain,
         address: parts.join('@')
       }
+    },
+
+    // Encode the email address to prevent XSS but leave in valid
+    // characters, following this official spec:
+    // http://en.wikipedia.org/wiki/Email_address#Syntax
+    encodeEmail: function(email) {
+      var result = encodeURI(email);
+      result = result.replace('%20', ' ').replace('%25', '%').replace('%5E', '^')
+                     .replace('%60', '`').replace('%7B', '{').replace('%7C', '|')
+                     .replace('%7D', '}');
+      return result;
     }
   }
 };
 
-if (window.jQuery) {
+// Export the mailcheck object if we're in a CommonJS env (e.g. Node).
+// Modeled off of Underscore.js.
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = Kicksend.mailcheck;
+}
+
+if (typeof window !== 'undefined' && window.jQuery) {
   (function($){
     $.fn.mailcheck = function(opts) {
       var self = this;
