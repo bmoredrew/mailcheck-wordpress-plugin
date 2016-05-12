@@ -20,14 +20,14 @@ class Szbl_Mailcheck_Js
 
 	public function wp_enqueue_scripts()
 	{
-		wp_enqueue_script( 'jquery' );
-		wp_register_script( 'szbl-mailcheck-js', plugins_url( '/js/mailcheck.min.js', __FILE__ ), array( 'jquery' ), true );
+		wp_enqueue_script( 'gs-jquery' );
+		wp_register_script( 'szbl-mailcheck-js', plugins_url( '/js/mailcheck.min.js', __FILE__ ), array( 'gs-jquery' ), true );
 		wp_enqueue_script( 'szbl-mailcheck-js' );
 	}
 
 	public function wp_footer()
 	{
-		$this->selector = '#email';
+		$this->selector = '#wlm_email_field';
 		include dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . 'mailcheck-inline-script.php';
 	}
 
