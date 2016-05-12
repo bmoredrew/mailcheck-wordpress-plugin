@@ -14,7 +14,7 @@ jQuery(document).ready(function($){
 	$(selector).on('blur', function(){
 
 		$(this).mailcheck({
-			domains: domains,                       
+			domains: domains,
 			topLevelDomains: topLevelDomains,
 			//distanceFunction: superStringDistance,
 	    	suggested: function(element, suggestion) {
@@ -34,13 +34,14 @@ jQuery(document).ready(function($){
 		    }
 		});
 
+		$('a.szbl-mailcheck-suggestion').on('click', function(){
+			$(selector).val( $(this).html() );
+			$(this).parent().remove();
+			return false;
+		});
+
 	});
 
-	$('a.szbl-mailcheck-suggestion').on('click', function(){
-		$(selector).val( $(this).html() );
-		$(this).parent().remove();
-		return false;
-	});
 
 });
 </script>
